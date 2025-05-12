@@ -8,7 +8,8 @@
   body, html {
     height: 100%;
     font-family: Arial, sans-serif;
-      scroll-behavior: smooth;
+    scroll-behavior: smooth;
+   overflow-x: hidden;
   }
 
 
@@ -95,7 +96,7 @@
   }
 
   .nav-links {
-    display: none;
+  display: none;
   flex-direction: column;
   position: absolute;
   top: 60px; /* Adjust based on nav height */
@@ -103,9 +104,9 @@
   background-color: white;
   padding: 1rem;
   }
-.nav-links.active {
+  .nav-links.active {
   display: flex;
-}
+ }
 
   .nav-links li a {
     text-decoration: none;
@@ -117,7 +118,7 @@
   .nav-links li a:hover {
     color: #aaa8a8;
   }
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
   .hamburger {
     display: block;
   }
