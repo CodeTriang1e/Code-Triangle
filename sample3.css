@@ -89,24 +89,42 @@
   }
   
 
-  .hamburger {
-    font-size: 2rem;
-    cursor: pointer;
-    display: none;
-  }
-
-  .nav-links {
+/* Base style (mobile first) */
+.nav-links {
   display: none;
   flex-direction: column;
   position: absolute;
-  top: 60px; /* Adjust based on nav height */
+  top: 60px;
   right: 0;
-  background-color: white;
+  background-color: black;
   padding: 1rem;
-  }
-  .nav-links.active {
+  list-style: none;
+}
+
+.nav-links.active {
   display: flex;
- }
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+ font-size: 2rem;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
 
   .nav-links li a {
     text-decoration: none;
