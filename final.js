@@ -1,7 +1,20 @@
-function toggleMenu() {
-    const nav = document.getElementById('navLinks');
-    nav.classList.toggle('show');
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
   }
+
+  // Close nav when clicking outside
+  document.addEventListener('click', function(event) {
+    const nav = document.querySelector('nav');
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    // If menu is open and click is outside the nav
+    if (navLinks.classList.contains('active') &&
+        !nav.contains(event.target)) {
+      navLinks.classList.remove('active');
+    }
+  });
 
  
   const slider = document.getElementById("slider");
