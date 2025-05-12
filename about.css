@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .about-section {
+    padding-top: 40px; /* Reduce this if needed */
+    padding-bottom: 40px;
+    margin-top: 0; 
+    background-color: #c2c6ca;
+  }
+  
+  /* Founder Section */
+.founder-container {
+  
+    width: 90%;
+    margin: 0 auto;
+    /* padding: 50px 0; */
+  }
+  
+  .founders-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #111827;
+  }
+  
+  .founder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    gap: 30px;
+  }
+  
+  .founder.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .founder-img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .founder-info {
+    max-width: 500px;
+  }
+  
+  .founder-info h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #111827;
+  }
+  
+  .founder-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* LinkedIn Button */
+  .linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0077b5;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .linkedin-btn:hover {
+    background-color: #005582;
+  }
+  
+  .linkedin-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Make Responsive */
+  @media (max-width: 768px) {
+    .founder {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .founder.reverse {
+      flex-direction: column;
+    }
+  
+    .founder-img {
+      width: 250px;
+      height: 250px;
+    }
+  
+    .founder-info {
+      max-width: 90%;
+    }
+  
+    .founders-heading {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+  }
+  .site-footer {
+    background: #111827;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .site-footer a {
+    color: #00C9A7;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .site-footer a:hover {
+    text-decoration: underline;
+  }  

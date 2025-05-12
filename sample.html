@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .front-image {
+    background-image: url('pawel-czerwinski-M40QnK-PXkI-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    }
+    .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(162, 114, 114, 0.4); /* adjust for more/less darkness */
+  z-index: 1;
+}
+
+/* Text over image */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: rgb(15, 15, 15);
+  font-size: 1rem;
+  font-weight: bold;
+  /* padding: 0 1rem; */
+  line-height: 1;
+}
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #222;
+      color: white;
+      padding: 2rem 2rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      font-size: 2rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #ff4d4d;
+    }
+
+    .slider-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+  }
+  
+  .slider-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+  
+  .slider {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .slide {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+    background: #f9dada;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .slide img {
+    width: 280px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-caption {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 500px;
+  }
+  
+  .gallery-caption strong {
+    font-size: 1.4rem;
+    color: #111;
+  }
+  
+
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hamburger {
+        display: block;
+      }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
+    
+  }
+  
+  @media (max-width: 768px) {
+    .slide {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .slide img {
+      width: 100%;
+    }
+  }
+  
+
+
+    
+  </style>
+</head>
+<body>
+<div class="front-image">  
+    <div class="overlay"></div>
+    <div class="hero-text">
+    <h1 style="font-size: 54px; font-family: Lucida Bright;">An easier, more powerful<br>platform to Grow Skills</h1>
+    <br><br>
+    <h3>Build your network, share skills, and open up on the Learning platformwhere you can be your whole self Forward Arrow</h3>
+</div>
+</div>
+  <nav class="navbar">
+    <div class="nav-logo">Code Triangle</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <br><br>
+
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide">
+        <img src="samp1.png" alt="">
+        <p class="gallery-caption">
+          <strong>Live Classes + Career Guidance</strong><br><br>
+          We offer one of the industry’s leading Project-Based Career Programs and complete guidance on completing the program.
+        </p>
+      </div>
+  
+      <div class="slide">
+        <img src="samp4.png" alt="">
+        <p class="gallery-caption">
+          <strong>Learn from Students</strong><br><br>
+          Get inspired by those just like you — students who’ve successfully built real-world projects, cracked interviews, and shared their journeys.
+        </p>
+      </div>
+  
+      <div class="slide">
+        <img src="samp3.png" alt="">
+        <p class="gallery-caption">
+          <strong>Collaborate and Elevate</strong><br><br>
+          Our peer-driven learning environment allows you to gain insights, follow proven paths, and collaborate with fellow learners in a way that builds both skills and confidence.
+        </p>
+      </div>
+  
+      <div class="slide">
+        <img src="samp2.png" alt="">
+        <p class="gallery-caption">
+          <strong>Solve Real World Problems</strong><br><br>
+          Move beyond theory with practical, hands-on projects that reflect real industry challenges. Whether it's building web apps, automating tasks, or analyzing data, you'll gain experience solving problems that actually matter — the kind that employers look for.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
