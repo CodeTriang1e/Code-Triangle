@@ -173,6 +173,7 @@ window.onclick = function(event) {
 const pythonBtn = document.getElementById('pythonBtn');
 const javaBtn = document.getElementById('javaBtn');
 const webBtn = document.getElementById('webBtn');
+const dataBtn = document.getElementById('dataBtn');
 
 const durationSection = document.getElementById('durationSection');
 const durationBadges = document.querySelectorAll('.duration-badge');
@@ -182,7 +183,7 @@ const priceBanner = document.getElementById('priceBanner');
 const finalSection = document.getElementById('finalSection');
 
 // Show durations when domain button is clicked
-[pythonBtn, javaBtn, webBtn].forEach(btn => {
+[pythonBtn, javaBtn, webBtn, databtn].forEach(btn => {
   btn.addEventListener('click', () => {
     durationSection.classList.remove('hidden');
     timeSlotSection.classList.add('hidden');
