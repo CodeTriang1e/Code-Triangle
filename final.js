@@ -183,7 +183,7 @@ const priceBanner = document.getElementById('priceBanner');
 const finalSection = document.getElementById('finalSection');
 
 // Show durations when domain button is clicked
-[pythonBtn, javaBtn, webBtn, databtn].forEach(btn => {
+[pythonBtn, javaBtn, webBtn, dataBtn].forEach(btn => {
   btn.addEventListener('click', () => {
     durationSection.classList.remove('hidden');
     timeSlotSection.classList.add('hidden');
