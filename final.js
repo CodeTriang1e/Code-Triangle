@@ -80,7 +80,7 @@ function openModal(course) {
         You will build live projects and learn from experienced mentors.`,
       callToAction: 'Enroll now and start building real-world websites!'
     },
-    'data-science': {
+    'python': {
       title: 'Python',
        video: `
         <video width="100%" height="200" autoplay muted  playsinline 
@@ -96,7 +96,7 @@ function openModal(course) {
         You'll work on real-time projects and explore Python libraries like Flask, Pandas, and NumPy.`,
       callToAction: 'Enroll now and start building intelligent, practical solutions with Python!'
     },
-    'ai': {
+    'java': {
       title: 'Java',
          video: `
         <video width="100%" height="200" autoplay muted  playsinline 
@@ -107,11 +107,27 @@ function openModal(course) {
           Your browser does not support the video tag.
         </video>
       `,
-      duration: '18 Weeks',
+      duration: '14 Weeks',
       description: `This course covers core and advanced Java concepts including OOP, data structures, and backend development.
         Build scalable applications and prepare for coding interviews.`,
       callToAction: 'Enroll now to create robust applications and strengthen your software engineering skills!'
-    }
+    },
+          'datascience': {
+      title: 'Data Science',
+         video: `
+        <video width="100%" height="200" autoplay muted  playsinline 
+    oncontextmenu="return false;" 
+    onpause="this.play();"
+    style="pointer-events: none; border-radius: 10px;"> >
+          <source src="java_vid (1).mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      `,
+      duration: '14 Weeks',
+      description: `This course covers essential and advanced Data Science concepts including statistics, machine learning, and data visualization. 
+        Work with real-world datasets and build predictive models to solve complex problems.`,
+callToAction: 'Enroll now to master data analysis, machine learning, and launch your career in Data Science!'
+
   };
 
   const selected = courseDetails[course];
