@@ -7,7 +7,7 @@
   body, html {
     height: 100%;
     font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
    overflow-x: hidden;
   }
 
@@ -259,6 +259,7 @@
   padding: 40px 20px;
   color: #333;
 } */
+
 
 .course-container {
   display: flex;
@@ -742,7 +743,7 @@
         }
 
     .hidden {
-      display: none;
+      display: none !important;
     }
   
 
@@ -836,66 +837,122 @@
       }
     }
 
+       :root {
+            --card-width: 350px;
+            --card-gap: 20px;
+            --animation-duration: 45s;
+        }
 
+       
+        .testimonial-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            overflow: hidden;
+        }
 
-    .testimonials {
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 20px;
-    }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            font-size: 2rem;
+        }
 
-    .carousel-container {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-    }
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
 
-    .carousel-track {
-      display: flex;
-      transition: transform 0.6s ease-in-out;
-    }
+        .carousel-track {
+            display: flex;
+            gap: var(--card-gap);
+            width: max-content;
+            animation: scroll var(--animation-duration) linear infinite;
+        }
 
-    .testimonial-card {
-      flex: 0 0 100%;
-      box-sizing: border-box;
-      padding: 30px;
-      background: #fff;
-      border-radius: 15px;
-      margin: 0 15px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    }
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
 
-    .testimonial-card .icon {
-      font-size: 35px;
-      color: #00796b;
-      margin-bottom: 10px;
-    }
+        .testimonial-card {
+            width: var(--card-width);
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
 
-    .testimonial-header {
-      font-weight: bold;
-      font-size: 16px;
-      color: #004080;
-      margin-bottom: 8px;
-    }
+        .student-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
 
-    .testimonial-comment {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #333;
-    }
+        .student-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #333;
+        }
 
-    @media (min-width: 768px) {
-      .testimonial-card {
-        flex: 0 0 50%;
-      }
-    }
+        .register-no {
+            font-size: 0.8rem;
+            color: #666;
+        }
 
-    @media (min-width: 1024px) {
-      .testimonial-card {
-        flex: 0 0 33.33%;
-      }
-    }
-  
+        .stars {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .feedback {
+            color: #555;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-50% - var(--card-gap)/2));
+            }
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            :root {
+                --card-width: 250px;
+                --card-gap: 15px;
+                --animation-duration: 40s;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+            }
+
+            .testimonial-card {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --card-width: 260px;
+                --card-gap: 12px;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+        }
   .about-us {
     background-color: #f9f9f9;
     padding: 60px 20px;
